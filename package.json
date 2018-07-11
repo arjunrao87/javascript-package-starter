@@ -1,0 +1,29 @@
+{
+  "name": "javascript-package-starter",
+  "version": "0.1.0",
+  "description": "Javascript Package Starter",
+  "main": "src/index.js",
+  "repository": "https://github.com/arjunrao87/javascript-package-starter.git",
+  "author": "Arjun Rao ( arjunrao87 )",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.2.0"
+  },
+  "keywords": [
+    "javascript",
+    "package"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir dist --ignore **/__tests__",
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "watch": "babel -w src --out-dir . --ignore **/__tests__",
+    "test": "echo 'No tests found' && exit 1"
+  }
+}
